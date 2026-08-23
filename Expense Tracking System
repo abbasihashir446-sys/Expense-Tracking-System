@@ -1,0 +1,34 @@
+ #Expense Tracking System
+Expense=[]
+while True:
+ print("   Expense   Tracking    System ....")
+ print("1 to add Expense")
+ print("2 to View Expense")
+ print("3 to Calculate Total Expense")
+ print("4 to Exit")
+ choice=int(input("Enter your Choice:"))
+
+
+
+ if choice==1:
+     name=input("Enter your Expense Name:")
+     expense=int(input("Enter your price :"))
+     Expense.append([name,expense])
+
+     print("Expense is addding Successfully")
+
+ if choice==2:
+    print("Expense Overview:",Expense)
+
+ elif choice==3:
+    total=0
+    for item in Expense:
+        total=total+item[1]
+    print("Total Expense:",total)
+
+ elif choice==4:
+    print("Exiting the program")
+    break
+
+ else:
+     print("Invalid Choice")
